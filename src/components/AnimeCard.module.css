@@ -1,0 +1,42 @@
+.animeCardContainer {
+  text-decoration: none;
+}
+
+.animeCard {
+  width: 250px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  color: #aaa;
+  gap: 15px;
+}
+
+.animeImg {
+  width: 250px;
+  height: 300px;
+  cursor: pointer;
+  position: relative;
+}
+
+.animeImg:hover {
+  filter: blur(3px);
+  .playBtn {
+    opacity: 100;
+  }
+}
+
+.animeTitle {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.animeTitle:hover {
+  color: #ffbade;
+}
+
+.duration {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}

@@ -1,0 +1,74 @@
+.navContainer {
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+  font-size: 20px;
+  align-items: center;
+  color: white;
+  background-position: top;
+  margin-bottom: 30px;
+}
+
+.heading {
+  color: white;
+  text-decoration: none;
+}
+
+.headerSetting {
+  display: flex;
+  gap: 20px;
+}
+
+.menuBtn {
+  border: none;
+}
+
+.menuIcon {
+  font-size: 22px;
+  color: white;
+  background-color: #201f31;
+  cursor: pointer;
+}
+
+.socialIcons {
+  padding: 5px;
+  font-size: 24px;
+}
+
+.headerIcons {
+  font-size: 18px;
+  padding: 5px;
+  color: #ffbade;
+}
+
+.searchBar {
+  height: 40px;
+  border-radius: 5px;
+  width: 300px;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 3.5%;
+  left: 36.5%;
+  color: #201f31;
+  font-size: 18px;
+}
+
+.headerComponents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.loginBtn {
+  margin-left: 280px;
+  background-color: #ffbade;
+  border-color: #ffbade;
+  height: 40px;
+  width: 60px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}

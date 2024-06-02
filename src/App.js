@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AnimeContextProvider } from "./Context/AnimeContext";
 
-function App() {
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Main from "./Pages/Main";
+import AnimeList from "./components/AnimeList";
+import AnimeDetails from "./Pages/AnimeDetails";
+import "./App.css";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimeContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route inded path="/" element={<Main />} />
+          <Route path="/home" element={<Home />}>
+            <Route path=":animeDetails" element={<AnimeDetails />} />
+          </Route>
+          <Route path="/:searchName" element={<AnimeList />}>
+            {/* <Route path=":animeDetails" element={<AnimeDetails />} /> */}
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<h1>Page not Found!</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </AnimeContextProvider>
   );
 }
-
-export default App;
